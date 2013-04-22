@@ -1,4 +1,4 @@
 Radio-mod
 =========
 
-My first mod, plays MP3 prom web 
+My first mod, plays MP3 from web 
