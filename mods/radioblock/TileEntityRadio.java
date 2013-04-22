@@ -77,9 +77,10 @@ public class TileEntityRadio extends TileEntity{
 			if(vol > 10000){
 				player.setVolume(0f);
 			}else{
-				float v2 = (10000f / vol) / 100f;
+				float v1 = 1f;
+				float v2 = (10000f / vol) / 1000f;
 				if(v2 > 1){
-					player.setVolume(1);
+					player.setVolume(v1);
 				}else{
 					player.setVolume(v2);
 				}
