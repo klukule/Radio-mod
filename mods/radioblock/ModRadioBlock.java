@@ -26,7 +26,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = "RadioBlock", name = "Radio Block", version = "0.1")
+@Mod(modid = "RadioBlock", name = "Radio Block", version = "0.2")
 @NetworkMod(channels = {"RadioBlock"},clientSideRequired = true,serverSideRequired = false,packetHandler = PacketHandler.class, connectionHandler = ConnectionHandler.class)
 public class ModRadioBlock {
 	@Instance
@@ -35,7 +35,7 @@ public class ModRadioBlock {
 	@SidedProxy(clientSide = "mods.radioblock.ClientProxy", serverSide="mods.radioblock.CommonProxy")
 	public static CommonProxy proxy;
 	
-	public final static Block blockRadio = new BlockRadio(189, Material.wood);
+	public final static Block blockRadio = new BlockRadio(1001, Material.wood);
 	
 	public static List<MP3Player> playerList = new ArrayList<MP3Player>();
 	

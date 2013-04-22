@@ -31,6 +31,7 @@ public class TileEntityRadio extends TileEntity{
 			if(side == Side.CLIENT){
 				player = new MP3Player(streamURL);
 				ModRadioBlock.playerList.add(player);
+
 			}
 		}else{
 			//System.err.println("Tried to play a stream twice out of one radio!");
@@ -80,8 +81,14 @@ public class TileEntityRadio extends TileEntity{
 				float v1 = 1f;
 				float v2 = (10000f / vol) / 1000f;
 				if(v2 > 1){
+					if(isPlaying){
+					this.worldObj.spawnParticle("note", this.xCoord +0.5, this.yCoord +0.5, this.zCoord +0.5, 0, 0, 0);
+					}
 					player.setVolume(v1);
 				}else{
+					if(isPlaying){
+					this.worldObj.spawnParticle("note", this.xCoord +0.5, this.yCoord +0.5, this.zCoord +0.5, 0, 0, 0);
+					}
 					player.setVolume(v2);
 				}
 			}
